@@ -22,12 +22,12 @@
 
 - **Relatórios**
   - **Subequipe 01**
-    - [Visão Geral SubEquipe_01](Base/Relatorios/Geral/1.1.1.SubEquipe_01.md)
+    - [Visão Geral SubEquipe_01](Base/Relatorios/SubEquipe_01/Geral/1.1.1.SubEquipe_01.md)
 
     - **Integrantes**
-      - [Edson](Base/Relatorios/Edson/1.1.1.Entrega_Edson.md)
-      - [Ricardo](Base/Relatorios/Ricardo/1.1.1.Entrega_Ricardo.md)
-      - [Yuri](Base/Relatorios/Yuri/1.1.1.Entrega_Yuri.md)
+      - [Edson](Base/Relatorios/SubEquipe_01/Edson/1.1.1.Entrega_Edson.md)
+      - [Ricardo](Base/Relatorios/SubEquipe_01/Ricardo/1.1.1.Entrega_Ricardo.md)
+      - [Yuri](Base/Relatorios/SubEquipe_01/Yuri/1.1.1.Entrega_Yuri.md)
 
 
   - **Subequipe 02**
