@@ -28,6 +28,12 @@
       - [Edson](Base/Relatorios/SubEquipe_01/Edson/1.1.1.Entrega_Edson.md)
       - [Ricardo](Base/Relatorios/SubEquipe_01/Ricardo/1.1.1.Entrega_Ricardo.md)
       - [Yuri](Base/Relatorios/SubEquipe_01/Yuri/1.1.1.Entrega_Yuri.md)
+        - [Contexto e Rastreabilidade](Base/Relatorios/SubEquipe_01/Yuri/1.1.1.1.ContextoRastreabilidade.md)
+        - [Padrão Prototype](Base/Relatorios/SubEquipe_01/Yuri/1.1.1.2.PadraoPrototype.md)
+        - [Modelagem UML](Base/Relatorios/SubEquipe_01/Yuri/1.1.1.3.ModelagemUML.md)
+        - [Implementação e Execução](Base/Relatorios/SubEquipe_01/Yuri/1.1.1.4.ImplementacaoExecucao.md)
+        - [Senso Crítico e Metodologia](Base/Relatorios/SubEquipe_01/Yuri/1.1.1.5.SensoCriticoMetodologia.md)
+        - [Versionamentos e Referências](Base/Relatorios/SubEquipe_01/Yuri/1.1.1.6.VersionamentoReferencias.md)
 
 
   - **Subequipe 02**
