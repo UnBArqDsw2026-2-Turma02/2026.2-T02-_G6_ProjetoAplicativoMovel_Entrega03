@@ -4,7 +4,11 @@ Papel no padrão: Subject (ConcreteSubject).
 Guarda o status da habilitação e mantém a lista de observadores,
 notificando todos quando o status muda.
 """
+import logging
+
 from observador import Observador
+
+logger = logging.getLogger(__name__)
 
 STATUS_VALIDOS = ("PPD Ativa", "Definitiva", "Cassada")
 
@@ -33,7 +37,11 @@ class AcompanhamentoHabilitacao:
     # --- notificação (notify) ---
     def notificar(self) -> None:
         for observador in list(self._observadores):
-            observador.atualizar(self)
+            try:
+                observador.atualizar(self)
+            except Exception:
+                # um observador com erro não impede que os demais sejam avisados
+                logger.exception("Falha ao notificar %s", type(observador).__name__)
 
     # --- mudança de estado que dispara a notificação ---
     def mudar_status(self, novo_status: str) -> None:

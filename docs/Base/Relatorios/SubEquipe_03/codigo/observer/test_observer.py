@@ -12,6 +12,11 @@ class ObservadorFalso(Observador):
         self.chamadas += 1
 
 
+class ObservadorComErro(Observador):
+    def atualizar(self, acompanhamento):
+        raise RuntimeError("falha simulada")
+
+
 class TestObserver(unittest.TestCase):
     def setUp(self):
         self.sujeito = AcompanhamentoHabilitacao("Maria")
@@ -69,6 +74,15 @@ class TestObserver(unittest.TestCase):
         self.assertIn("cassada", push.enviadas[0])
         self.assertIn("Cassada", email.enviadas[0])
         self.assertEqual(aud.registros, ["Maria -> Cassada"])
+
+    def test_9_erro_em_um_observador_nao_impede_os_demais(self):
+        ruim, bom = ObservadorComErro(), ObservadorFalso()
+        self.sujeito.adicionar(ruim)
+        self.sujeito.adicionar(bom)
+        with self.assertLogs("acompanhamento_habilitacao", level="ERROR"):
+            self.sujeito.mudar_status("Cassada")
+        self.assertEqual(bom.chamadas, 1)
+        self.assertEqual(self.sujeito.status, "Cassada")
 
 
 if __name__ == "__main__":
