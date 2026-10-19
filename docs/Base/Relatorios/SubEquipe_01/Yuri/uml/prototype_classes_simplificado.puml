@@ -4,7 +4,6 @@ skinparam classAttributeIconSize 0
 
 abstract class DocumentoVeicular <<Prototype>> {
   + {abstract} clonar() : DocumentoVeicular
-  + {abstract} preencher(dados : DadosVeiculo) : None
 }
 
 class CRLVe <<ConcretePrototype>> {
@@ -33,7 +32,6 @@ class DadosVeiculo <<dataclass>> {
 DocumentoVeicular <|-- CRLVe
 EmissorCRLVe o--> "1" DocumentoVeicular : prototipo
 EmissorCRLVe ..> DadosVeiculo : usa
-DocumentoVeicular ..> DadosVeiculo
 CRLVe ..> DadosVeiculo : preenche com
 
 note right of CRLVe::clonar
