@@ -14,8 +14,13 @@ class DadosVeiculo:
 class DocumentoVeicular(ABC):
 
     @abstractmethod
-    def clonar(self):
+    def clonar(self) -> "DocumentoVeicular":
         """Cria uma cópia do documento."""
+        ...
+
+    @abstractmethod
+    def preencher(self, dados: DadosVeiculo) -> None:
+        """Preenche os dados específicos de uma emissão."""
         ...
 
 
