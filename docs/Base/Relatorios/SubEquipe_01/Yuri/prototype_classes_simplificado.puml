@@ -1,0 +1,45 @@
+@startuml
+title Prototype aplicado à Emissão do CRLV-e\nDiagrama de Classes da implementação demonstrativa
+skinparam classAttributeIconSize 0
+
+abstract class DocumentoVeicular <<Prototype>> {
+  + {abstract} clonar() : DocumentoVeicular
+}
+
+class CRLVe <<ConcretePrototype>> {
+  + tipo : str
+  + orgao_emissor : str
+  + versao_layout : str
+  + placa : str
+  + renavam : str
+  + exercicio : int
+  + clonar() : DocumentoVeicular
+  + preencher(dados : DadosVeiculo) : None
+  + __str__() : str
+}
+
+class EmissorCRLVe <<Client>> {
+  + prototipo : DocumentoVeicular
+  + emitir(dados : DadosVeiculo) : DocumentoVeicular
+}
+
+class DadosVeiculo <<dataclass>> {
+  + placa : str
+  + renavam : str
+  + exercicio : int
+}
+
+DocumentoVeicular <|-- CRLVe
+EmissorCRLVe o--> "1" DocumentoVeicular : prototipo
+EmissorCRLVe ..> DadosVeiculo : usa
+CRLVe ..> DadosVeiculo : preenche com
+
+note right of CRLVe::clonar
+  return deepcopy(self)
+end note
+
+note bottom of EmissorCRLVe
+  documento = self.prototipo.clonar()
+  documento.preencher(dados)
+end note
+@enduml
