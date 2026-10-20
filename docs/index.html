@@ -14,7 +14,24 @@
     window.$docsify = {
       loadSidebar: true,
       name: 'Repositorio Template',
-      repo: 'https://github.com/UnBArqDsw2025-1-Turma01/RepositorioTemplateEntrega1'
+      repo: 'https://github.com/UnBArqDsw2025-1-Turma01/RepositorioTemplateEntrega1',
+      plugins: [
+        // Recolhe os subitens de um item do menu que tem link (ex.: Yuri) e só os
+        // mostra quando a página aberta está na mesma pasta desse item.
+        function (hook) {
+          hook.doneEach(function () {
+            var rota = decodeURIComponent(location.hash.replace(/^#\/?/, '').split('?')[0]);
+            document.querySelectorAll('.sidebar-nav li').forEach(function (li) {
+              var link = li.querySelector(':scope > a');
+              var sub = li.querySelector(':scope > ul');
+              if (!link || !sub) return;
+              var alvo = decodeURIComponent(link.getAttribute('href').replace(/^#\/?/, '').split('?')[0]);
+              var pasta = alvo.slice(0, alvo.lastIndexOf('/') + 1);
+              sub.style.display = pasta && rota.indexOf(pasta) === 0 ? '' : 'none';
+            });
+          });
+        }
+      ]
     }
   </script>
   <!-- Docsify v4 -->
