@@ -310,7 +310,7 @@ g++ -std=c++17 -Wall -Wextra -Wpedantic -I . main.cpp $(find Aplicacao Infraestr
 ./sistema.exe
 ```
 
-## Passo a passo para gravar o sistema
+## Passo para execução
 
 Os arquivos de exemplo foram preparados para mostrar três situações: uma infração com opções de **20% e 40%**, uma com **somente 20%** e uma **vencida, sem desconto disponível**. Os registros de boleto e as solicitações do órgão começam vazios para que o vídeo possa focar na consulta dos percentuais sem reutilizar resultados de execuções anteriores.
 
@@ -338,8 +338,6 @@ Os arquivos de exemplo foram preparados para mostrar três situações: uma infr
 4. Selecione `2 — INF-002`. Escolha **1 — Consultar detalhes** para mostrar a situação **Vencida** e o vencimento em `10/10/2026`. Volte, escolha **2 — Consultar/solicitar desconto** e mostre a mensagem de que não há descontos disponíveis.
 5. Encerre voltando pelos menus e escolhendo **0 — Voltar**.
 
-**Por que os resultados diferem:** a política de benefício retorna 20% e 40% quando o órgão aderiu ao SNE; retorna somente 20% quando o órgão oferece o desconto CDT; e não retorna opções quando a situação da infração não é `A_VENCER`. O usuário de demonstração consta no arquivo de adesões SNE.
-
 ### Arquivos de dados preparados
 
 - `Infraestrutura/Infracoes/Infracoes/Mock/infracoes.txt`: três registros, um para cada cenário acima.
@@ -356,7 +354,7 @@ Os arquivos de exemplo foram preparados para mostrar três situações: uma infr
 
 | Nome do membro | Lições aprendidas | Uso da IA Generativa |
 |---|---|---|
-| Matheus Pinheiro | Aprendi a identificar problemas de manutenção e avaliar quais padrões podem ajudar a reduzir o acoplamento. Também aprendi a comparar os papéis do padrão com as responsabilidades que o código realmente implementa, distinguindo adaptações reais de simples encaminhamento para mocks. | A IA generativa ajudou na criação das aplicações que leem arquivos TXT e dos mocks. Também usei a IA para elaborar uma proposta de diagrama a partir do código; como ela ficou visualmente poluída, comparei seus componentes por partes com minha versão simplificada e com o código-fonte. |
+| Matheus Pinheiro | Aprendi a identificar problemas de manutenção e avaliar quais padrões podem ajudar a reduzir o acoplamento. Também aprendi a comparar os papéis do padrão com as responsabilidades que o código realmente implementa, distinguindo adaptações reais de simples encaminhamento para mocks. | A IA generativa ajudou na criação das aplicações que leem arquivos TXT e dos mocks. Também usei a IA para elaborar uma proposta de diagrama a partir do código; apesar de ter ficado visualmente poluída, ainda foi util porque ao pedir para a IA explicar separadamente cada parte e ia comparando com meu diagrama feito, consigui usar como forma de verificação. |
 
 ## Versionamentos
 
