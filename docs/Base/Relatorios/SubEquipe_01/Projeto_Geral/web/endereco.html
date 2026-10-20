@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alterar endereço do veículo · DETRAN SubEquipe 01</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-pagina="endereco">
+  <header class="topo">
+    <div class="topo__conteudo">
+      <div class="marca">
+        <span class="marca__losango"><span class="marca__circulo"></span></span>
+        <span>DETRAN Digital · MVP<small>SubEquipe 01 · GoFs Criacionais</small></span>
+      </div>
+      <nav class="navegacao" aria-label="Telas do MVP">
+        <a href="index.html" data-pagina="inicio">Início</a>
+        <a href="consultas.html" data-pagina="consultas">Consultas</a>
+        <a href="endereco.html" data-pagina="endereco">Endereço</a>
+        <a href="crlve.html" data-pagina="crlve">CRLV-e</a>
+        <a href="padroes.html" data-pagina="padroes">Padrões</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pagina">
+    <ol class="fluxo" aria-label="Fluxo do atendimento">
+      <li data-pagina="inicio">Escolher veículo</li>
+      <li data-pagina="consultas">Consultar pendências</li>
+      <li data-pagina="endereco">Atualizar endereço</li>
+      <li data-pagina="crlve">Emitir CRLV-e</li>
+    </ol>
+    <h1>Alterar endereço do veículo</h1>
+    <p class="subtitulo">UC03: endereço no DF, CEP obrigatório e não caixa postal, sem débitos vencidos e sem restrições.</p>
+    <p class="selo-padrao"><strong>Factory Method + Multiton · Ricardo</strong> · <code>AlteracaoEnderecoCreator(uf).processar()</code> → <code>ServicoAlteracaoEndereco</code></p>
+    <section class="cartao">
+      <h2>Veículo</h2>
+      <div id="seletor-veiculo"></div>
+    </section>
+    <section class="cartao">
+      <h2>Endereço atual</h2>
+      <div id="painel-veiculo"></div>
+    </section>
+    <section class="cartao">
+      <h2>Novo endereço</h2>
+      <form id="formulario-endereco">
+        <div class="seletor">
+          <div class="campo">
+            <label for="campo-uf-destino">UF</label>
+            <select id="campo-uf-destino" name="uf_destino"><option value="DF">DF</option><option value="GO">GO</option></select>
+          </div>
+          <div class="campo">
+            <label for="campo-cep-destino">CEP</label>
+            <input id="campo-cep-destino" name="cep_destino" type="text" placeholder="70000-000" inputmode="numeric">
+          </div>
+          <div class="campo campo--checkbox">
+            <input id="campo-caixa-postal" name="caixa_postal" type="checkbox">
+            <label for="campo-caixa-postal">É caixa postal</label>
+          </div>
+        </div>
+        <div class="acoes">
+          <button class="botao" type="submit">Salvar endereço</button>
+          <a class="botao botao--verde" href="crlve.html">Seguir para o CRLV-e →</a>
+        </div>
+      </form>
+      <div id="resultado-endereco"></div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    MVP acadêmico: dados simulados, sem relação com o sistema real do DETRAN-DF.
+    Padrões de <a href="https://github.com/UnBArqDsw2026-2-Turma02/2026.2-T02-_G6_ProjetoAplicativoMovel_Entrega03/tree/feature/subequipe-1/docs/Base/Relatorios/SubEquipe_01">Edson, Ricardo e Yuri</a>.
+  </footer>
+
+  <div id="notificacoes" class="notificacoes" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

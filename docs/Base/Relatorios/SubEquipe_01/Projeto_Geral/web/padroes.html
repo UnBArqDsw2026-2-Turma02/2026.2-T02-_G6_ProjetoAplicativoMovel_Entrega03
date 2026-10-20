@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Padrões aplicados · DETRAN SubEquipe 01</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-pagina="padroes">
+  <header class="topo">
+    <div class="topo__conteudo">
+      <div class="marca">
+        <span class="marca__losango"><span class="marca__circulo"></span></span>
+        <span>DETRAN Digital · MVP<small>SubEquipe 01 · GoFs Criacionais</small></span>
+      </div>
+      <nav class="navegacao" aria-label="Telas do MVP">
+        <a href="index.html" data-pagina="inicio">Início</a>
+        <a href="consultas.html" data-pagina="consultas">Consultas</a>
+        <a href="endereco.html" data-pagina="endereco">Endereço</a>
+        <a href="crlve.html" data-pagina="crlve">CRLV-e</a>
+        <a href="padroes.html" data-pagina="padroes">Padrões</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pagina">
+    <ol class="fluxo" aria-label="Fluxo do atendimento">
+      <li data-pagina="inicio">Escolher veículo</li>
+      <li data-pagina="consultas">Consultar pendências</li>
+      <li data-pagina="endereco">Atualizar endereço</li>
+      <li data-pagina="crlve">Emitir CRLV-e</li>
+    </ol>
+    <h1>Padrões aplicados</h1>
+    <p class="subtitulo">Como os três GoFs criacionais da subequipe convivem no mesmo sistema.</p>
+    <section class="cartao">
+      <h2>Participantes</h2>
+      <table>
+        <thead><tr><th>Padrão</th><th>Papel</th><th>Classe</th><th>Arquivo</th></tr></thead>
+        <tbody>
+          <tr><td>Multiton (Ricardo)</td><td>Multiton</td><td><code>BaseDetranMultiton</code></td><td><code>nucleo/base_detran.py</code></td></tr>
+          <tr><td rowspan="4">Factory Method (Edson)</td><td>Product</td><td><code>Consulta</code></td><td rowspan="4"><code>padroes/consultas.py</code></td></tr>
+          <tr><td>Concrete Products</td><td><code>ConsultaDebitos</code>, <code>ConsultaRestricoes</code>, <code>ConsultaFinanciamentos</code>, <code>ConsultaNadaConsta</code></td></tr>
+          <tr><td>Creator</td><td><code>ConsultaCreator</code></td></tr>
+          <tr><td>Concrete Creators</td><td><code>DebitosCreator</code>, <code>RestricoesCreator</code>, <code>FinanciamentosCreator</code>, <code>NadaConstaCreator</code></td></tr>
+          <tr><td rowspan="4">Factory Method (Ricardo)</td><td>Product</td><td><code>ServicoDetran</code></td><td rowspan="4"><code>padroes/servicos.py</code></td></tr>
+          <tr><td>Concrete Products</td><td><code>ServicoAlteracaoEndereco</code>, <code>ServicoEmissaoCRLVe</code></td></tr>
+          <tr><td>Creator</td><td><code>ServicoCreator</code></td></tr>
+          <tr><td>Concrete Creators</td><td><code>AlteracaoEnderecoCreator</code>, <code>EmissaoCRLVeCreator</code></td></tr>
+          <tr><td rowspan="3">Prototype (Yuri)</td><td>Prototype</td><td><code>DocumentoVeicular</code></td><td rowspan="3"><code>padroes/documentos.py</code></td></tr>
+          <tr><td>ConcretePrototype</td><td><code>CRLVe</code></td></tr>
+          <tr><td>Client</td><td><code>EmissorCRLVe</code></td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="cartao">
+      <h2>Fluxo integrado da emissão do CRLV-e</h2>
+      <ol>
+        <li><code>EmissaoCRLVeCreator(uf)</code> obtém a base da UF pelo <strong>Multiton</strong>.</li>
+        <li>O <strong>Factory Method</strong> do Ricardo cria o <code>ServicoEmissaoCRLVe</code>.</li>
+        <li>O serviço usa o <strong>Factory Method</strong> do Edson (<code>NadaConstaCreator</code>) para conferir pendências.</li>
+        <li>Sem pendências, o <strong>Prototype</strong> do Yuri clona o <code>CRLVe</code> base e preenche placa, RENAVAM e exercício.</li>
+        <li>Com pendências, a emissão é recusada e nenhum clone é criado.</li>
+      </ol>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    MVP acadêmico: dados simulados, sem relação com o sistema real do DETRAN-DF.
+    Padrões de <a href="https://github.com/UnBArqDsw2026-2-Turma02/2026.2-T02-_G6_ProjetoAplicativoMovel_Entrega03/tree/feature/subequipe-1/docs/Base/Relatorios/SubEquipe_01">Edson, Ricardo e Yuri</a>.
+  </footer>
+
+  <div id="notificacoes" class="notificacoes" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

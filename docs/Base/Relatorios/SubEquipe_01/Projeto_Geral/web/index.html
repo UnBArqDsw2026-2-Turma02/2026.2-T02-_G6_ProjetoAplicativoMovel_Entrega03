@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atendimento ao proprietário · DETRAN SubEquipe 01</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-pagina="inicio">
+  <header class="topo">
+    <div class="topo__conteudo">
+      <div class="marca">
+        <span class="marca__losango"><span class="marca__circulo"></span></span>
+        <span>DETRAN Digital · MVP<small>SubEquipe 01 · GoFs Criacionais</small></span>
+      </div>
+      <nav class="navegacao" aria-label="Telas do MVP">
+        <a href="index.html" data-pagina="inicio">Início</a>
+        <a href="consultas.html" data-pagina="consultas">Consultas</a>
+        <a href="endereco.html" data-pagina="endereco">Endereço</a>
+        <a href="crlve.html" data-pagina="crlve">CRLV-e</a>
+        <a href="padroes.html" data-pagina="padroes">Padrões</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pagina">
+    <ol class="fluxo" aria-label="Fluxo do atendimento">
+      <li data-pagina="inicio">Escolher veículo</li>
+      <li data-pagina="consultas">Consultar pendências</li>
+      <li data-pagina="endereco">Atualizar endereço</li>
+      <li data-pagina="crlve">Emitir CRLV-e</li>
+    </ol>
+    <h1>Atendimento ao proprietário</h1>
+    <p class="subtitulo">Escolha a base da UF e o veículo. A seleção acompanha você em todas as telas.</p>
+    <p class="selo-padrao"><strong>Multiton</strong> · <code>BaseDetranMultiton.get_instance(uf)</code> — uma base por UF, compartilhada pelos três padrões</p>
+    <section class="cartao">
+      <h2>Veículo</h2>
+      <div id="seletor-veiculo"></div>
+    </section>
+    <section class="cartao">
+      <h2>Dados do veículo</h2>
+      <div id="painel-veiculo"></div>
+    </section>
+    <section class="grade">
+      <a class="cartao botao-cartao" href="consultas.html"><h2>1. Consultar pendências</h2><p>Débitos, restrições, financiamentos e nada consta.</p></a>
+      <a class="cartao botao-cartao" href="endereco.html"><h2>2. Atualizar endereço</h2><p>Regras do UC03, gravando na base da UF.</p></a>
+      <a class="cartao botao-cartao" href="crlve.html"><h2>3. Emitir CRLV-e</h2><p>Só emite com nada consta; o documento nasce de um clone.</p></a>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    MVP acadêmico: dados simulados, sem relação com o sistema real do DETRAN-DF.
+    Padrões de <a href="https://github.com/UnBArqDsw2026-2-Turma02/2026.2-T02-_G6_ProjetoAplicativoMovel_Entrega03/tree/feature/subequipe-1/docs/Base/Relatorios/SubEquipe_01">Edson, Ricardo e Yuri</a>.
+  </footer>
+
+  <div id="notificacoes" class="notificacoes" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

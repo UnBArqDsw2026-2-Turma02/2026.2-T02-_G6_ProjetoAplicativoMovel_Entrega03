@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultas do veículo · DETRAN SubEquipe 01</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-pagina="consultas">
+  <header class="topo">
+    <div class="topo__conteudo">
+      <div class="marca">
+        <span class="marca__losango"><span class="marca__circulo"></span></span>
+        <span>DETRAN Digital · MVP<small>SubEquipe 01 · GoFs Criacionais</small></span>
+      </div>
+      <nav class="navegacao" aria-label="Telas do MVP">
+        <a href="index.html" data-pagina="inicio">Início</a>
+        <a href="consultas.html" data-pagina="consultas">Consultas</a>
+        <a href="endereco.html" data-pagina="endereco">Endereço</a>
+        <a href="crlve.html" data-pagina="crlve">CRLV-e</a>
+        <a href="padroes.html" data-pagina="padroes">Padrões</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pagina">
+    <ol class="fluxo" aria-label="Fluxo do atendimento">
+      <li data-pagina="inicio">Escolher veículo</li>
+      <li data-pagina="consultas">Consultar pendências</li>
+      <li data-pagina="endereco">Atualizar endereço</li>
+      <li data-pagina="crlve">Emitir CRLV-e</li>
+    </ol>
+    <h1>Consultas do veículo</h1>
+    <p class="subtitulo">Cada card é produzido por um Creator diferente, sem nenhum if/elif no cliente.</p>
+    <p class="selo-padrao"><strong>Factory Method · Edson</strong> · <code>ConsultaCreator.consultar()</code> → <code>DebitosCreator</code>, <code>RestricoesCreator</code>, <code>FinanciamentosCreator</code>, <code>NadaConstaCreator</code></p>
+    <section class="cartao">
+      <h2>Veículo</h2>
+      <div id="seletor-veiculo"></div>
+    </section>
+    <section class="cartao">
+      <h2>Resultado</h2>
+      <div id="resultados-consultas" class="grade"></div>
+      <div class="acoes"><a id="botao-proximo" class="botao botao--verde" href="crlve.html">Próximo passo →</a></div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    MVP acadêmico: dados simulados, sem relação com o sistema real do DETRAN-DF.
+    Padrões de <a href="https://github.com/UnBArqDsw2026-2-Turma02/2026.2-T02-_G6_ProjetoAplicativoMovel_Entrega03/tree/feature/subequipe-1/docs/Base/Relatorios/SubEquipe_01">Edson, Ricardo e Yuri</a>.
+  </footer>
+
+  <div id="notificacoes" class="notificacoes" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
