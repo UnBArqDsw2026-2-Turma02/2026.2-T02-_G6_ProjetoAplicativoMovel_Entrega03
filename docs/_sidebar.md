@@ -28,9 +28,15 @@
 
   - **Subequipe 02**
     - [Relatório](Base/Relatorios/1.1.2.SubEquipe_02.md)
+    - [Matheus](Base/SubEquipe_2/matheus/matheus.md)
+    - [Felipe](Base/SubEquipe_2/Felipe/1.1.2.Entrega_Felipe.md)
 
   - **Subequipe 03**
-    - [Relatório](Base/Relatorios/1.1.3.SubEquipe_03.md)
+    - [Visão Geral SubEquipe_03](Base/Relatorios/SubEquipe_03/1.1.3.SubEquipe_03.md)
+    - **Integrantes**
+      - [Artur](Base/Relatorios/SubEquipe_03/1.1.3.SubEquipe_03_Artur.md)
+      - [Beatriz](Base/Relatorios/SubEquipe_03/1.1.3.SubEquipe_03_Beatriz.md)
+      - [Lara](Base/Relatorios/SubEquipe_03/1.1.3.SubEquipe_03_Lara.md)
 
 - **Base de Conhecimento**
   - [Padrões de Projeto](Base/1.PadroesDeProjeto.md)

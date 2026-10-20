@@ -1,0 +1,3 @@
+# Solicitações de boleto encaminhadas ao órgão autuador.
+# BOLETO|cpf|idInfracao.
+BOLETO|12345678901|INF-001
