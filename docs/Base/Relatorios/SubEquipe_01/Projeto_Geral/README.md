@@ -12,12 +12,37 @@ Os dados são simulados e o projeto é uma proposta acadêmica, sem relação co
 
 ## Como executar
 
-Requer Python 3.10 ou superior. Não há dependências externas.
+**Requisito:** Python 3.10 ou superior (`python --version`). Não há bibliotecas para instalar.
 
-```bash
-python server.py        # abre em http://localhost:8000
-python server.py 8001   # outra porta
-```
+1. Clone o repositório e entre na branch da SubEquipe_01:
+
+   ```bash
+   git clone https://github.com/UnBArqDsw2026-2-Turma02/2026.2-T02-_G6_ProjetoAplicativoMovel_Entrega03.git
+   cd 2026.2-T02-_G6_ProjetoAplicativoMovel_Entrega03
+   git checkout feature/subequipe-1
+   ```
+
+   Sem Git, também dá para baixar o ZIP da branch `feature/subequipe-1` no GitHub (botão **Code → Download ZIP**) e extrair.
+
+2. Entre na pasta do MVP e inicie o servidor:
+
+   ```bash
+   cd docs/Base/Relatorios/SubEquipe_01/Projeto_Geral
+   python server.py
+   ```
+
+   No Windows, se `python` não for reconhecido, use `py server.py`.
+
+3. Abra **http://localhost:8000** no navegador.
+
+Se a porta 8000 estiver ocupada, use outra: `python server.py 8001` e abra `http://localhost:8001`. Para encerrar, pressione `Ctrl+C` no terminal.
+
+**Roteiro sugerido:**
+1. Na tela **Início**, escolha a UF **DF** e o veículo **ABC1D23**.
+2. Em **Consultas**, veja as pendências.
+3. Em **CRLV-e**, a emissão é bloqueada.
+4. Volte, escolha **JKA1234**, altere o endereço em **Endereço** e emita o **CRLV-e** duas vezes.
+5. O painel "Prova do Prototype" mostra documentos com `id` diferentes e o protótipo vazio.
 
 ## Como os padrões se unem
 
