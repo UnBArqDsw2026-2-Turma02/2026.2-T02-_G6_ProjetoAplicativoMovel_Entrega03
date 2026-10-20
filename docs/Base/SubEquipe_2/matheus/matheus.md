@@ -106,7 +106,7 @@ Também foi utilizado o padrão comportamental **Strategy**, detalhado em uma se
 
 # Modelagem (Notação UML)
 
-A modelagem foi feita manualmente pela plataforma [lucidChart](), que segue a notação UML
+A modelagem foi feita manualmente pela plataforma [lucidChart](https://lucid.app/documents#/documents?folder_id=home), que segue a notação UML
 Obs: Nessa diagramação os tipos de retorno e algumas outras informações estão ocultas para reduzir a poluição visual
 
 
@@ -123,6 +123,8 @@ Obs: Nessa diagramação os tipos de retorno e algumas outras informações est�
 <summary>Diagrama do Adapter aplicado ao LoginGov</summary>
 
 ![Exemplo de modelagem adapter realizada](./imagens/modelagemAdapter.png)
+
+Fonte: Matheus Pinheiro.
 
 </details>
 
@@ -148,6 +150,8 @@ Obs: Nessa diagramação os tipos de retorno e algumas outras informações est�
 
 ![Exemplo de modelagem Facade realizada](./imagens/facade_diagrama.png)
 
+Fonte: Matheus Pinheiro.
+
 </details>
 
 | Papel no padrão | Elemento do sistema | 
@@ -165,6 +169,8 @@ Obs: Nessa diagramação os tipos de retorno e algumas outras informações est�
 
 ![Diagrama implementado de infrações](./imagens/Diagrama%20em%20branco%20-%20Página%201%20(4).svg)
 
+Fonte: Matheus Pinheiro.
+
 </details>
 
 <details>
@@ -173,12 +179,16 @@ Obs: Nessa diagramação os tipos de retorno e algumas outras informações est�
 Rascunho inicial da diagramação:
 ![Diagrama implementado 1](./imagens/diagrama1.png)
 
+Fonte: Matheus Pinheiro.
+
 </details>
 
 <details>
 <summary>Diagrama completo de infrações — versão 2</summary>
 
 ![Diagrama implementado 2](./imagens/diagrama2.png)
+
+Fonte: Matheus Pinheiro.
 
 </details>
 
@@ -188,6 +198,7 @@ Rascunho inicial da diagramação:
 Apresentado na reunião
 ![Diagrama implementado 3](./imagens/diagrama3.png)
 
+Fonte: Matheus Pinheiro.
 
 </details>
 
@@ -197,6 +208,7 @@ Apresentado na reunião
 Pré-implementação
 ![Diagrama implementado 4](./imagens/diagrama4.png)
 
+Fonte: Matheus Pinheiro.
 
 </details>
 
@@ -205,7 +217,11 @@ Pré-implementação
 
 ![Diagrama implementado por IA a partir do codigo](./imagens/diagramaIA.png)
 
+Fonte: diagrama gerado com o modelo Luna do GPT.
+
 </details>
+
+Acesso aos meus diagramas: [lucidChart](https://lucid.app/lucidchart/08cca27c-e026-4578-823d-b483ba160863/edit?viewport_loc=-6048%2C29044%2C4382%2C2243%2C0_0&invitationId=inv_2d34c798-8a7d-486c-9460-928f6d1f6977)
 
 # Implementação (Código & Vídeo com Padrão em Execução)
 
