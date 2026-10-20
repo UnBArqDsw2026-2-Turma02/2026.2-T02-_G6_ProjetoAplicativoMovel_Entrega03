@@ -147,13 +147,12 @@ function documentoHtml(documentoEmitido) {
 const TELAS = {
   async inicio() {
     const painelVeiculo = document.getElementById("painel-veiculo");
-    await montarSeletorVeiculo(({ uf, veiculo, idBase }) => {
+    await montarSeletorVeiculo(({ veiculo }) => {
       const situacaoVeiculo = veiculo.debitos.length || veiculo.restricoes.length || veiculo.financiamentos.length
         ? `<p class="resultado resultado--pendente">Este veículo tem pendências: veja as consultas antes de emitir o CRLV-e.</p>`
         : `<p class="resultado resultado--limpo">Veículo sem pendências: pode seguir para a emissão do CRLV-e.</p>`;
       painelVeiculo.innerHTML = `
         ${dadosVeiculoHtml(veiculo)}
-        <p class="subtitulo">Base ${escaparHtml(uf)} · id da instância <code>${idBase}</code> (a mesma em todas as telas)</p>
         ${situacaoVeiculo}`;
     });
   },

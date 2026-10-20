@@ -33,7 +33,7 @@ python testes.py        # testes dos três padrões integrados
 
 | Tela | O que faz | Padrão |
 |--|--|--|
-| `index.html` | Escolha da UF e do veículo; mostra o id da instância da base | Multiton |
+| `index.html` | Escolha da UF e do veículo e situação do veículo | Multiton |
 | `consultas.html` | Débitos, restrições, financiamentos e nada consta | Factory Method (Edson) |
 | `endereco.html` | Alteração de endereço com as regras do UC03 | Factory Method + Multiton (Ricardo) |
 | `crlve.html` | Emissão do CRLV-e e prova de independência dos clones | Prototype (Yuri) |
