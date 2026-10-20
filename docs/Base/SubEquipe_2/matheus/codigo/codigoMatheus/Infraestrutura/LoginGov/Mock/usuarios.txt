@@ -1,0 +1,2 @@
+#cpf       | nome                   | senha   | aderiuSNE| numeroCNH| codigoSegurancaCNH| placa  | renavam  | numeroSegurancaCRV
+12345678901| Usuário de demonstração| senha123| false    |    123456|              98765| ABC1234| 123456789|              54321
