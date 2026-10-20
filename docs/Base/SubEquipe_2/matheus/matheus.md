@@ -129,7 +129,7 @@ Obs: Nessa diagramação os tipos de retorno e algumas outras informações est�
 
 </details>
 
-<details>
+<details open>
 <summary>Diagrama do Adapter aplicado ao LoginGov</summary>
 
 ![Exemplo de modelagem adapter realizada](./imagens/modelagemAdapter.png)
@@ -146,7 +146,15 @@ Fonte: Matheus Pinheiro.
 | **Adaptee** | `ApiUsuariosArquivoMock` | 
 
 
-## Facade
+## Facades
+
+### Problema
+
+Os fluxos de adesão ao SNE e de infrações dependem de vários componentes, como gateways, validação de documentos, consultas, benefícios, boletos e operações sobre documentos. Se o cliente precisar coordenar cada componente diretamente, conhecerá detalhes internos dos subsistemas e ficará mais acoplado à infraestrutura.
+
+### Benefícios
+
+As classes `SNEFacade` e `InfracaoFacade` oferecem operações de nível mais alto para esses fluxos e centralizam a coordenação dos componentes envolvidos. Isso simplifica o uso pelo cliente, reduz o acoplamento com os detalhes internos e concentra a lógica de cada subsistema, facilitando sua manutenção. No protótipo, os serviços continuam simulados por mocks; a Facade organiza o acesso a eles, mas não representa uma integração real.
 
 <details>
 <summary>Exemplo de Facade do Refactoring.Guru</summary>
@@ -155,7 +163,7 @@ Fonte: Matheus Pinheiro.
 
 </details>
 
-<details>
+<details open>
 <summary>Diagrama da Facade do SNE</summary>
 
 ![Exemplo de modelagem Facade realizada](./imagens/facade_diagrama.png)
@@ -174,7 +182,7 @@ Fonte: Matheus Pinheiro.
 
 ## Modelagem Completa
 
-<details>
+<details open>
 <summary>Diagrama completo de infrações — versão final</summary>
 
 ![Diagrama implementado de infrações](./imagens/Diagrama%20em%20branco%20-%20Página%201%20(4).svg)
