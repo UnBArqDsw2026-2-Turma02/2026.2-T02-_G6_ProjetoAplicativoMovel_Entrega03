@@ -1,0 +1,4 @@
+# Solicitações de desconto encaminhadas ao órgão autuador.
+# DESCONTO|cpf|idInfracao|percentual|termoAceito.
+DESCONTO|12345678901|INF-001|40|true
+DESCONTO|12345678901|INF-001|40|true

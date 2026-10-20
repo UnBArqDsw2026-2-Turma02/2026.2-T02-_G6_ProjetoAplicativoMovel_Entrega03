@@ -1,0 +1,1 @@
+# boletoId| idInfracao| status        | numeroAuto    | dataVencimento| valorOriginal| valorDesconto| valorPagar| percentualDesconto| codigoPagamento                              | arquivoPDF
