@@ -10,6 +10,8 @@ MVP que une, num único sistema, os três GoFs criacionais da SubEquipe_01, sem 
 
 Os dados são simulados e o projeto é uma proposta acadêmica, sem relação com a arquitetura real do DETRAN-DF Digital.
 
+**Pasta do projeto no GitHub:** [`docs/Base/Relatorios/SubEquipe_01/Projeto_Geral`](https://github.com/UnBArqDsw2026-2-Turma02/2026.2-T02-_G6_ProjetoAplicativoMovel_Entrega03/tree/feature/subequipe-1/docs/Base/Relatorios/SubEquipe_01/Projeto_Geral)
+
 ## Como executar
 
 **Requisito:** Python 3.10 ou superior (`python --version`). Não há bibliotecas para instalar.
