@@ -17,7 +17,6 @@ Requer Python 3.10 ou superior. Não há dependências externas.
 ```bash
 python server.py        # abre em http://localhost:8000
 python server.py 8001   # outra porta
-python testes.py        # testes dos três padrões integrados
 ```
 
 ## Como os padrões se unem
