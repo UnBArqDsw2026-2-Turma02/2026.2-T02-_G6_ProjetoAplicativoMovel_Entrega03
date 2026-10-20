@@ -56,8 +56,5 @@ A equipe discutiu os modelos GoF criacionais relacionados ao trabalho, em especi
 | Reunião final para debate da entrega e crítica ao código | Toda a equipe | 19/10/2026  |
 
 ## 5. Próxima reunião
-
-18/10/2026 (domingo), para integração dos códigos e fechamento da entrega. [Google Meet]
-
 * **Reunião de Debate de ações de cada membro**: https://youtu.be/_PYI-SkI-_0
 * **Reunião de Apresentação do Produto**: https://www.youtube.com/watch?v=ozdqTFhiHnk
