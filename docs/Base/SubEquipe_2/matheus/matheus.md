@@ -34,55 +34,65 @@ As imagens a seguir registram telas do tutorial utilizado como referência para 
 <details>
 <summary>1. Login</summary>
 
-<p><img src="imagens/login.png" alt="Tela de login do aplicativo" width="300"></p>
-<p><em>O usuário informa CPF e senha para entrar.</em></p>
+![Tela de login do aplicativo](imagens/login.png)
+
+O usuário informa CPF e senha para entrar.
 
 </details>
 
 <details>
 <summary>2. Acesso às consultas de infrações</summary>
 
-<p><img src="imagens/infracoes_pesquisa.png" alt="Menu para consultar infrações por infrator ou veículo" width="420"></p>
-<p><em>O tutorial apresenta as consultas por infrator e por veículo.</em></p>
+![Menu para consultar infrações por infrator ou veículo](imagens/infracoes_pesquisa.png)
 
-<p><img src="imagens/infracoes_por_veiculo.png" alt="Seleção de veículo para consultar infrações" width="360"></p>
-<p><em>Na consulta por veículo, o usuário escolhe um dos veículos listados.</em></p>
+O tutorial apresenta as consultas por infrator e por veículo.
 
-<p><img src="imagens/tela_de_infracoes.png" alt="Lista de infrações associadas a um veículo" width="360"></p>
-<p><em>Exemplo de infrações exibidas para o veículo selecionado, com opção relacionada à adesão ao SNE.</em></p>
+![Seleção de veículo para consultar infrações](imagens/infracoes_por_veiculo.png)
+
+Na consulta por veículo, o usuário escolhe um dos veículos listados.
+
+![Lista de infrações associadas a um veículo](imagens/tela_de_infracoes.png)
+
+Exemplo de infrações exibidas para o veículo selecionado, com opção relacionada à adesão ao SNE.
 
 </details>
 
 <details>
 <summary>3. Detalhes e opções da infração</summary>
 
-<p><img src="imagens/detalhes_e_funcoes.png" alt="Detalhes da infração e opções disponíveis" width="360"></p>
-<p><em>A tela apresenta dados da infração e ações como solicitar boleto e escolher desconto.</em></p>
+![Detalhes da infração e opções disponíveis](imagens/detalhes_e_funcoes.png)
 
-<p><img src="imagens/reconhecimento_infracao.png" alt="Termo de reconhecimento da infração" width="360"></p>
-<p><em>Exemplo da etapa de leitura e aceite do termo de reconhecimento.</em></p>
+A tela apresenta dados da infração e ações como solicitar boleto e escolher desconto.
+
+![Termo de reconhecimento da infração](imagens/reconhecimento_infracao.png)
+
+Exemplo da etapa de leitura e aceite do termo de reconhecimento.
 
 </details>
 
 <details>
 <summary>4. Adesão ao SNE</summary>
 
-<p><img src="imagens/termoSNE.png" alt="Termos e condições de adesão ao SNE" width="360"></p>
-<p><em>O usuário pode ler e aceitar os termos de adesão.</em></p>
+![Termos e condições de adesão ao SNE](imagens/termoSNE.png)
 
-<p><img src="imagens/SNE_CNH_CRLV.png" alt="Informação de dados da CNH ou do CRLV para adesão ao SNE" width="360"></p>
-<p><em>O tutorial mostra o preenchimento dos dados da CNH ou do CRLV para validar a adesão.</em></p>
+O usuário pode ler e aceitar os termos de adesão.
 
-<p><img src="imagens/avisoSNE.png" alt="Aviso de adesão ao SNE na tela de infrações por veículo" width="360"></p>
-<p><em>A tela informa a disponibilidade da adesão ao SNE durante a consulta de infrações.</em></p>
+![Informação de dados da CNH ou do CRLV para adesão ao SNE](imagens/SNE_CNH_CRLV.png)
+
+O tutorial mostra o preenchimento dos dados da CNH ou do CRLV para validar a adesão.
+
+![Aviso de adesão ao SNE na tela de infrações por veículo](imagens/avisoSNE.png)
+
+A tela informa a disponibilidade da adesão ao SNE durante a consulta de infrações.
 
 </details>
 
 <details>
 <summary>5. Ações sobre documentos</summary>
 
-<p><img src="imagens/documento.png" alt="Menu com ações disponíveis para um documento" width="520"></p>
-<p><em>As opções ilustradas - abrir, baixar, compartilhar e imprimir - contextualizam as operações de documento representadas pelo Adapter no código.</em></p>
+![Menu com ações disponíveis para um documento](imagens/documento.png)
+
+As opções ilustradas - abrir, baixar, compartilhar e imprimir - contextualizam as operações de documento representadas pelo Adapter no código.
 
 </details>
 
@@ -96,7 +106,7 @@ Pela análise do fluxo, a aplicação precisa conversar com componentes que pode
 
 As APIs e plataformas externas não são integrações reais neste projeto: são representadas por mocks e arquivos TXT. Assim, a manutenção isolada do adapter é uma motivação arquitetural do exemplo, não uma comprovação de integração ou substituição de uma API de produção.
 
-Além disso, subsistemas com várias operações foram reunidos por **Facades**, como nos fluxos de SNE e infrações.
+Além disso, subsistemas com várias operações foram reunidos por **Facades**, como nos fluxos de SNE e infrações, também para auxiliar na manutenabilidade.
 
 #### Extra:
 
