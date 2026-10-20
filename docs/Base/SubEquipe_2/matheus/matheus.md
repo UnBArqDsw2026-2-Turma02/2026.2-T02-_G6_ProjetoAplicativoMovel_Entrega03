@@ -362,7 +362,7 @@ Os arquivos de exemplo foram preparados para mostrar três situações: uma infr
 
 | Nome do membro | Contribuição | Data |
 |---|---|---|
-| Matheus Pinheiro | Revisão do relatório individual: correção dos papéis do Adapter de LoginGov e da Facade do SNE, alinhamento dos trechos de implementação e explicitação das diferenças entre os mocks do projeto e os exemplos do Refactoring.Guru. | 19/10/2026 |
+| Matheus Pinheiro | Revisão do relatório individual: correção dos papéis do Adapter de LoginGov e da Facade do SNE, alinhamento dos trechos de implementação e explicitação das diferenças entre os mocks do projeto e os exemplos do Refactoring.Guru. [Commits](https://github.com/UnBArqDsw2026-2-Turma02/2026.2-T02-_G6_ProjetoAplicativoMovel_Entrega03/commits/main/?author=matheus-06) | 19/10/2026 |
 
 ## Referências
 
