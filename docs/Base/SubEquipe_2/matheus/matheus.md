@@ -100,17 +100,18 @@ As opções ilustradas - abrir, baixar, compartilhar e imprimir - contextualizam
 
 ## GoF Estrutural - Adapter
 
-### Contexto (Problema)
+### Problema
 
-Pela análise do fluxo, a aplicação precisa conversar com componentes que podem oferecer contratos diferentes daqueles que o restante do sistema deseja usar. O padrão **Adapter** permite concentrar essa adaptação em um componente, reduzindo o acoplamento do cliente com a interface concreta. Neste protótipo, o LoginGov ilustra esse papel: o cliente chama o contrato `GatewayAutenticacao`, e o adapter consulta uma API mockada baseada em arquivo TXT, valida as credenciais e converte o registro para os tipos usados pela aplicação.
+O cliente da aplicação espera um contrato próprio para autenticação, enquanto o serviço que fornece os dados de usuário possui operações e estruturas diferentes. Acessá-lo diretamente faria o cliente depender desses detalhes e misturaria a conversão dos dados à lógica do fluxo.
 
-As APIs e plataformas externas não são integrações reais neste projeto: são representadas por mocks e arquivos TXT. Assim, a manutenção isolada do adapter é uma motivação arquitetural do exemplo, não uma comprovação de integração ou substituição de uma API de produção.
+### Benefícios
 
-Além disso, subsistemas com várias operações foram reunidos por **Facades**, como nos fluxos de SNE e infrações, também para auxiliar na manutenabilidade.
+O `AutenticacaoLoginAdapter` implementa o contrato `GatewayAutenticacao` esperado pelo cliente, consulta a API mockada baseada em arquivo txt e converte o registro para os tipos usados pela aplicação. Assim, mantém a conversão isolada, reduz o acoplamento e permite alterar a implementação do serviço sem espalhar seus detalhes pelo cliente.
 
-#### Extra:
+Neste protótipo, a API é simulada por mocks e arquivos txt; portanto, os benefícios descritos são arquiteturais e não representam uma integração real com o LoginGov ou o Gov.br.
 
-Também foi utilizado o padrão comportamental **Strategy**, detalhado em uma seção complementar.
+
+
 
 
 
@@ -179,6 +180,10 @@ Fonte: Matheus Pinheiro.
 | **Subsystem** | `ContextoValidacaoDocumentoSNE` | 
 | **Subsystem** | `gateway_adesao_sne` |
 
+
+## Extra:
+
+Também foi utilizado o padrão comportamental **Strategy**, detalhado em uma seção complementar.
 
 ## Modelagem Completa
 
